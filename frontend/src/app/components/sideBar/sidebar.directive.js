@@ -9,7 +9,7 @@
   function acmeSidebar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/sidebar/sidebar.html',
+      templateUrl: 'app/components/sideBar/sidebar.html',
       // scope: {
       //     creationDate: '='
       // },
