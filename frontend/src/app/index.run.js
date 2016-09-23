@@ -6,15 +6,13 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log,$rootScope) {
+  function runBlock($log) {
 
     $log.debug('runBlock end');
 
-
-    $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
- 	// called every time the state transition is attempted
- 	console.log('state change',toState)
-	})
+    //
+    // $rootScope.$on('$stateChangeStart', function(event, toState) {
+	// })
 
   }
 

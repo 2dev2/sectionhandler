@@ -5,6 +5,8 @@
     .module('frontend')
     .directive('acmeSidebar', acmeSidebar);
 
+  //
+  // acmeSidebar.$inject = ['acmeSidebar']
   /** @ngInject */
   function acmeSidebar() {
     var directive = {
@@ -21,8 +23,8 @@
     return directive;
 
     /** @ngInject */
-    function sidebarController(moment,$location) {
-      var vm = this;
+    function sidebarController() {
+      // var vm = this;
 
       // "vm.creationDate" is available by directive option "bindToController: true"
       // vm.relativeDate = moment(vm.creationDate).fromNow();
