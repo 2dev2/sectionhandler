@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+    <div>
+    <div>
+    <div ng-show = "main.showHomeButton">
+    <button type="button" ng-click="main.startGame()" class="btn btn-info">{{main.gameStartText||'start Game'}}</button>
+    <button type="button" ng-show="main.showSttingOptionsButton" ng-click="main.showSttingOptions = !main.showSttingOptions" class="btn btn-info">game setting</button>
+    </div>
+
+
+    <div ng-show="main.showSttingOptions" >
+  
+      <label for="email">Number of rows for generating square matrix </label>
+      <input type="text" class="form-control" id="email" placeholder="Enter number of rows in integer" ng-model="main.s.numberOfRow"> 
+
+      <label for="pwd">Time for countdown in seconds</label>
+      <input type="text" class="form-control" id="pwd" placeholder="time for countdown in second" ng-model="main.s.numberOfCountDownSeconds">
+
+      <label for="rand">Number of randomly generated colored cell </label>
+      <input type="text" class="form-control" id="rand" placeholder="number of generated colored cell in integer"  ng-model="main.s.numberOfRandomCell">
+
+      <label for="chance">Number of chance </label>
+      <input type="text" class="form-control" id="chance" placeholder="number of generated colored cell in integer"  ng-model="main.s.numberOfChances">
+
+    <button  class="btn btn-default" ng-click="main.changeSettings(main.s.numberOfRow,main.s.numberOfCountDownSeconds,main.s.numberOfRandomCell,main.s.numberOfChances)">Submit</button>
+  </div>
+
+  </div>
+ <!--  <div ui-view>
+  </div> -->
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="extra_padding">
+
+<div  ng-show="gameCtrl.showStausOfGame" class="align_text_in_block">
+<h1 	ng-bind="gameCtrl.statusOfGame" >
+</h1>
+</div>
+
+  <timer-countdown count-down-time="gameCtrl.numberOfCountDownSeconds" timer-object="gameCtrl.timerObject" ng-if="gameCtrl.timerObject.clickOnStartButton" timer-passed='gameCtrl.timerObject.timer1'>
+  </timer-countdown>
+
+
+
+ <div class="row">
+ 		<div class="col-sm-3 align_center">
+ 		<div class="align_center">
+ 		<!-- ng-click = "gameCtrl.stopTimer()" -->
+ 		<!-- ng-click ="gameCtrl.timerObject.stopResumeTimer('clock-timer', this)" -->
+		 <!--  <button type="button" ng-hide="gameCtrl.hideResumeButton"  ng-click ="gameCtrl.timerObject.stopResumeTimer()" class="btn " >resume game</button> -->
+		 </div>
+		 <div class="giveSpace">
+		  <button type="button" ng-click = "gameCtrl.exitGame()" class="btn btn-danger ">Home</button>
+		 </div>
+		 <!-- <div ui-view>  -->
+		 <!-- </div> -->
+ 		</div>
+		<div class="col-sm-9">
+		   <div ng-repeat = "r in gameCtrl.row " style="padding: 15px;
+		    margin: 15px;">
+		      <span ng-repeat= "c in gameCtrl.row" style="padding: 15px;
+		    margin: 15px;" ng-class="(gameCtrl.mat[r][c].color=='new')?'newColor':'oldColor'" ng-click="gameCtrl.resetMatrixCell(gameCtrl.mat[r][c])">{{gameCtrl.mat[r][c].row}}{{gameCtrl.mat[r][c].col}}
+		    </div>
+		</div>
+</div>
+
+
+  </div>
