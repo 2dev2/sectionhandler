@@ -4,9 +4,9 @@
   angular
     .module('frontend')
     .directive('acmeSidebar', acmeSidebar);
+  
+   acmeSidebar.$inject = ['sidebarOptionsService']
 
-  //
-  // acmeSidebar.$inject = ['acmeSidebar']
   /** @ngInject */
   function acmeSidebar() {
     var directive = {
@@ -16,21 +16,15 @@
       //     creationDate: '='
       // },
       controller: sidebarController,
-      controllerAs: 'vm',
+      controllerAs: 'sidebarCtrl',
       bindToController: true
     };
-
     return directive;
 
     /** @ngInject */
-    function sidebarController() {
-      // var vm = this;
-
-      // "vm.creationDate" is available by directive option "bindToController: true"
-      // vm.relativeDate = moment(vm.creationDate).fromNow();
-      // vm.isActive = function(viewLocation){
-      //   return viewLocation == $location.path()
-      // }
+    function sidebarController($log,sidebarOptionsService) {
+      var vm = this;
+      vm.options = sidebarOptionsService.getSidebarOptions()
     }
   }
 

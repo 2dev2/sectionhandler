@@ -1,11 +1,12 @@
 <div>
-    <div>
-        view
+
+    <div id="sidebarName" >sidebar Name</div>
+
+
+    <div ng-repeat="option in sidebarCtrl.options">
+        {{option.name}}
         <ul class="sidebar sidebar-side">
-        <li class="active"><a ng-href="#">profile</a></li>
-        <li><a ng-href="#">signup</a></li>
-        <!--<li><a ng-href="#">Contact</a></li>-->
-        <!--<li><a ng-href="#">login</a></li>-->
+        <li class="active" ng-repeat="subOption in option['type']"><a ng-href="#">{{subOption.name}}</a></li>
         </ul>
     </div>
 </div>

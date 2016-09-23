@@ -23,7 +23,7 @@
             },
             {
                 id:1,
-                name:' default profiles',
+                name:' default',
                 type:[
 
                 ]
