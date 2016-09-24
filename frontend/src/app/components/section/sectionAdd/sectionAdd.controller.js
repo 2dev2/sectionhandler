@@ -64,10 +64,10 @@
         .module('frontend')
         .controller('ModalInstanceCtrl', ModalInstanceCtrl);
 
-    ModalInstanceCtrl.$inject = ['$uibModalInstance','items','SectionListService']
+    ModalInstanceCtrl.$inject = ['$uibModalInstance','items','SectionAddService']
 
     /** @ngInject */
-     function ModalInstanceCtrl($uibModalInstance,items,SectionListService) {
+     function ModalInstanceCtrl($uibModalInstance,items,SectionAddService) {
         var vm = this;
         vm.items = items
         vm.orderDropDown = {
@@ -93,7 +93,7 @@
         vm.selected.sectionName = ''
 
         vm.ok = function () {
-            SectionListService.setNewSection(angular.copy(vm.selected))
+            SectionAddService.setNewSection(angular.copy(vm.selected))
             $uibModalInstance.close(vm.selected.item);
         };
 
