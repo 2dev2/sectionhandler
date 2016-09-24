@@ -3,7 +3,7 @@
         <h3 class="modal-title" id="modal-title">Add Section</h3>
     </div>
     <div class="modal-body" id="modal-body">
-        <div style="display: flex">
+        <div class="row">
             <div class="col-sm-4" ng-repeat="d in [{id:1,name:'new'},{id:2,name:'default'}] track by $index">
             <input class="gr RadioButton" id={{"data-type-radio-btn-"+d.id}} type="radio" name="data-type"
                    ng-value="d.id" ng-model="$ctrl.selected.sectionType">
@@ -11,18 +11,19 @@
                    ng-bind="d.name"></label>
         </div>
         </div>
+        <div class="row">
 
-            <div class="form-group col-sm-6" style="display: inline-block">
-                <label for="sectionName">sectionName:</label>
-                <input type="text" class="form-control" id="sectionName" ng-model="$ctrl.selected.sectionName">
+        <div class="form-group col-sm-6">
+            <label for="sectionName">sectionName:</label>
+            <input type="text" class="form-control" id="sectionName" ng-model="$ctrl.selected.sectionName">
+        </div>
             </div>
-        <!--<input class="gr RadioButton"  type="text" name="data-type"  ng-model="$ctrl.selected.sectionName">-->
-        <div>
-            <div>order position</div>
+        <div class="row">
+            <span class="m_l">order position</span>
             <div>
-            <select id="orderDropDown" class="font-label f_l" name="mySelect" ng-model="$ctrl.selected.order.name" ng-options="option.name as option.alias for option in $ctrl.orderDropDown.availableSections" >
+            <select id="orderDropDown" class="font-label btn col-sm-2 m_l" name="mySelect" ng-model="$ctrl.selected.order.name" ng-options="option.name as option.alias for option in $ctrl.orderDropDown.availableSections" >
             </select>
-            <select id="SectionListDropDown" class="font-label f_l" name="mySelect1" ng-model="$ctrl.selected.section.name" ng-options="option.name as option.alias for option in $ctrl.SectionListDropDown.availableSections" >
+            <select id="SectionListDropDown" class="font-label btn col-sm-offset-1 col-sm-3" name="mySelect1" ng-model="$ctrl.selected.section.name" ng-options="option.name as option.alias for option in $ctrl.SectionListDropDown.availableSections" >
             </select>
                 </div>
 
