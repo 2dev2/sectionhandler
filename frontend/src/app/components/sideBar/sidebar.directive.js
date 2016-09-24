@@ -4,7 +4,7 @@
   angular
     .module('frontend')
     .directive('acmeSidebar', acmeSidebar);
-  
+
    acmeSidebar.$inject = ['sidebarOptionsService']
 
   /** @ngInject */
@@ -12,12 +12,12 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/sideBar/sidebar.html',
-      // scope: {
-      //     creationDate: '='
-      // },
+      scope: {},
+      bindToController: {
+        whichMenuSelectedFromSidebar:'&'
+      },
       controller: sidebarController,
-      controllerAs: 'sidebarCtrl',
-      bindToController: true
+      controllerAs: 'sidebarCtrl'
     };
     return directive;
 
@@ -27,5 +27,4 @@
       vm.options = sidebarOptionsService.getSidebarOptions()
     }
   }
-
 })();

@@ -6,7 +6,7 @@
     <div ng-repeat="option in sidebarCtrl.options">
         {{option.name}}
         <ul class="sidebar sidebar-side">
-        <li class="active" ng-repeat="subOption in option['type']"><a ng-href="#">{{subOption.name}}</a></li>
+        <li class="active" ng-repeat="subOption in option['type']"><a ng-href="#" ng-click="sidebarCtrl.whichMenuSelectedFromSidebar()(subOption.name)">{{subOption.name}}</a></li>
         </ul>
     </div>
 </div>

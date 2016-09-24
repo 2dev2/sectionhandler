@@ -17,18 +17,19 @@
          url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'mainCtrl'
         // abstract:true
       })
-      // .state('startGamePage', {
-      //   url: '/Game',
-      //   templateUrl: 'app/components/startPageGame/startPageGame.html',
-      //   controller: 'startGameController',
-      //   controllerAs: 'gameCtrl',
-      //    params: {
-      //       settings: {}
-      //     }
-      // })
+      .state('profile', {
+        url: 'profile',
+        parent:'home',
+        templateUrl: 'app/components/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'profileCtrl',
+         params: {
+            settings: {}
+          }
+      })
       // .state('startGamePage.gameOver', {
       //   // url: 'Game',
       //   templateUrl: 'app/components/gameOver/gameOver.html',
