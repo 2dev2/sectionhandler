@@ -26,9 +26,15 @@
         templateUrl: 'app/components/profile/profile.html',
         controller: 'ProfileController',
         controllerAs: 'profileCtrl',
+          // resolve: ProfileController.resolve,
+          resolve:{
+              _sectionList : function(sectionListService){
+                  return sectionListService.getSectionList()
+              }
+          },
          params: {
             settings: {}
-          }
+          },
       })
       // .state('startGamePage.gameOver', {
       //   // url: 'Game',
