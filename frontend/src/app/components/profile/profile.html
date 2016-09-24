@@ -1,9 +1,18 @@
 <div>
+
     <div class="profile_view header_color">
         ProfileView
-        <button type="button" class="btn btn-primary new_section_button" >add new Section</button>
+        <button ui-sref="sectionAdd"  data-toggle="modal" type="button" class="btn btn-primary new_section_button" >add new Section</button>
+
+        <!--<a class="btn" style="width:100%;" href="#test_modal" data-toggle="modal">Add Image</a>-->
+
+
     </div>
+    <div class="modal " id="userModel" tabindex="1" role="dialog" >
+dev
+    </div >
     <div class="section-list" ng-repeat = "sectionData in profileCtrl.sectionList track by $index">
         <section section-data="sectionData"></section>
     </div>
+    <div ui-view></div>
 </div>

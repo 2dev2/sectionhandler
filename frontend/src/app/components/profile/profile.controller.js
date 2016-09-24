@@ -17,6 +17,10 @@
     function ProfileController($log,$state,_sectionList) {
         var vm = this;
         vm.sectionList = _sectionList
+        vm.sectionAdd = function (sectionAdd1) {
+            // $log.debug(sectionAdd1)
+            // $state.go('sectionAdd')
+        }
         // $log.debug($state,vm.sectionList,_sectionList)
     }
 

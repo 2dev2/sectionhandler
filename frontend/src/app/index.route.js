@@ -36,12 +36,13 @@
             settings: {}
           }
       })
-      // .state('startGamePage.gameOver', {
-      //   // url: 'Game',
-      //   templateUrl: 'app/components/gameOver/gameOver.html',
-      //   controller: 'gameOverController',
-      //   controllerAs: 'gameOverCtrl',
-      // })
+      .state('sectionAdd', {
+        url: '',
+          parent:'profile',
+        templateUrl: 'app/components/section/sectionAdd/sectionAdd.html',
+        controller: 'sectionAddController',
+        controllerAs: 'sectionAddCtrl'
+      })
       //  .state('startGamePage.retryGame', {
       //   // url: 'Game',
       //   templateUrl: 'app/components/retryGame/retryGame.html',

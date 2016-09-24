@@ -25,7 +25,7 @@
     /** @ngInject */
     function sectionController($log) {
       var vm = this;
-      $log.debug(vm.sectionData)
+      // $log.debug(vm.sectionData)
     }
   }
 
