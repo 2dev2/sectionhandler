@@ -1,7 +1,11 @@
 (function() {
     'use strict';
 
+    angular
+        .module('frontend')
+        .controller('ProfileController', ProfileController);
 
+    ProfileController.$inject = ['$state','_sectionList']
 
     // ProfileController.resolve = {
     //     _sectionList :['sectionListService',function(sectionListService){
@@ -9,18 +13,11 @@
     //     }]
     // }
 
-
-    angular
-        .module('frontend')
-        .controller('ProfileController', ProfileController);
-
-    ProfileController.$inject = ['$state','sectionListService']
-
     /** @ngInject */
-    function ProfileController($state,sectionListService,_sectionList) {
+    function ProfileController($state,_sectionList) {
         var vm = this;
         vm.sectionList = [1,2,3,4]
-        console.log($state,vm.sectionList,sectionListService.getSectionList(),_sectionList)
+        console.log($state,vm.sectionList,_sectionList)
     }
 
 
