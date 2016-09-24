@@ -21,7 +21,7 @@
                     'delete',
                     'move'
                 ],
-                fieldOperation:['add-group','craete feild group'],
+                fieldOperation:['add-field','create field group'],
                 field:[
                     {field1:{id:4,name:'profile'}},
                     {field2:{id:4,name:'signup'}}
@@ -35,7 +35,7 @@
                 position:'below',
                 OrderIndex:1,
                 headerSectionOpeartion:['default'],
-                fieldOperation:['add-group','craete feild group'],
+                fieldOperation:['add-field','create field group'],
                 field:[
                     {field1:{id:5,name:'profile'}},
                     {field2:{id:6,name:'signup'}}
