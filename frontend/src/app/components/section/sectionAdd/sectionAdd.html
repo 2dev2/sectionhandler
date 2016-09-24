@@ -1,26 +1,32 @@
-<!--<div class="section " >-->
-    <!--&lt;!&ndash;<section-header></section-header>&ndash;&gt;-->
-    <!--<div class="section_header header_color">-->
-        <!--<span>{{sectionCtrl.sectionData.sectionName}}</span>-->
-        <!--<span class="section_op" ng-repeat = "headerOp in sectionCtrl.sectionData.headerSectionOpeartion">-->
-            <!--{{headerOp}}-->
-        <!--</span>-->
-        <!--<span class="field_op" ng-repeat = "headerFieldOp in sectionCtrl.sectionData.fieldOperation">-->
-            <!--{{headerFieldOp}}-->
-        <!--</span>-->
-    <!--</div>-->
-
 <div class="modal-dialog">
     <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        <h3 class="modal-title" id="modal-title">Add Section</h3>
     </div>
     <div class="modal-body" id="modal-body">
-        <ul>
-            <li ng-repeat="item in $ctrl.items">
-                <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
-            </li>
-        </ul>
-        Selected: <b>{{ $ctrl.selected.item }}</b>
+        <div style="display: flex">
+            <div class="col-sm-4" ng-repeat="d in [{id:1,name:'new'},{id:2,name:'default'}] track by $index">
+            <input class="gr RadioButton" id={{"data-type-radio-btn-"+d.id}} type="radio" name="data-type"
+                   ng-value="d.id" ng-model="$ctrl.selected.sectionType">
+            <label class="RadioButtonLabel" for={{"data-type-radio-btn-"+d.id}}
+                   ng-bind="d.name"></label>
+        </div>
+        </div>
+
+            <div class="form-group col-sm-6" style="display: inline-block">
+                <label for="sectionName">sectionName:</label>
+                <input type="text" class="form-control" id="sectionName" ng-model="$ctrl.selected.sectionName">
+            </div>
+        <!--<input class="gr RadioButton"  type="text" name="data-type"  ng-model="$ctrl.selected.sectionName">-->
+        <div>
+            <div>order position</div>
+            <div>
+            <select id="orderDropDown" class="font-label f_l" name="mySelect" ng-model="$ctrl.selected.order.name" ng-options="option.name as option.alias for option in $ctrl.orderDropDown.availableSections" >
+            </select>
+            <select id="SectionListDropDown" class="font-label f_l" name="mySelect1" ng-model="$ctrl.selected.section.name" ng-options="option.name as option.alias for option in $ctrl.SectionListDropDown.availableSections" >
+            </select>
+                </div>
+
+        </div>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>

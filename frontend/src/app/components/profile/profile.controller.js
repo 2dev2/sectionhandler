@@ -20,8 +20,7 @@
         // var modalInstance = $uibModal.open({
         //     templateUrl: 'app/components/profile/popup.html',
         // });
-        vm.sectionAdd = function (sectionAdd1) {
-            // $log.debug(sectionAdd1)
+        vm.sectionAdd = function () {
              $state.go('sectionAdd')
         }
         // $log.debug($state,vm.sectionList,_sectionList)

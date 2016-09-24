@@ -23,9 +23,9 @@
     return directive;
 
     /** @ngInject */
-    function sectionController($log) {
-      var vm = this;
-      // $log.debug(vm.sectionData)
+    function sectionController() {
+      // var vm = this;
+      // // $log.debug(vm.sectionData)
     }
   }
 

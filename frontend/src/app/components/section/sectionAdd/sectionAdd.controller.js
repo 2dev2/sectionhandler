@@ -5,15 +5,27 @@
         .module('frontend')
         .controller('sectionAddController', sectionAddController);
 
-    sectionAddController.$inject = ['$log','$uibModal','$state']
+    sectionAddController.$inject = ['$log','$uibModal','$state','SectionListService']
 
     /** @ngInject */
-    function sectionAddController($log,$uibModal,$state) {
+    function sectionAddController($log,$uibModal,$state,SectionListService) {
         var vm = this;
         $log.debug("add")
         vm.name = 'theNameHasBeenPassed';
-        vm.items = ['item1', 'item2', 'item3'];
+        vm.items = SectionListService.getnewSectionListDefault()
+        vm.positionDropDown = {
+            availableOptions: [
+                {id: '0', name: "above", alias: "Above"},
+                {id: '1', name: "down",alias: "Down"}
+            ]
+        };
+        vm.positionDropDown.selectedOption=vm.positionDropDown.availableOptions[0];
+
+        vm.availableSection = SectionListService.selectedSectionListFn()
+        console.log(vm.availableSection)
         vm.animationsEnabled = true;
+
+
         vm.open = function (size) {
             var modalInstance = $uibModal.open({
                 animation: vm.animationsEnabled,
@@ -26,6 +38,9 @@
                 resolve: {
                     items: function () {
                         return vm.items;
+                    },
+                    order:function(){
+                        return vm.positionDropDown
                     }
                 }
             });
@@ -49,61 +64,46 @@
         .module('frontend')
         .controller('ModalInstanceCtrl', ModalInstanceCtrl);
 
-    ModalInstanceCtrl.$inject = ['$uibModalInstance','items']
+    ModalInstanceCtrl.$inject = ['$uibModalInstance','items','SectionListService']
 
     /** @ngInject */
-     function ModalInstanceCtrl($uibModalInstance,items) {
+     function ModalInstanceCtrl($uibModalInstance,items,SectionListService) {
         var vm = this;
         vm.items = items
-        vm.selected = {
-            item: vm.items[0]
+        vm.orderDropDown = {
+            availableSections: [
+                {id: '0', name: "above", alias: "Above"},
+                {id: '1', name: "down", alias: "Down"}
+            ]
         };
+        // vm.orderDropDown.selectedOption = vm.orderDropDown.availableSections[0];
+
+        vm.SectionListDropDown = {
+            availableSections: [
+                {id: '0', name: "bio", alias: "BIODATA"},
+                {id: '1', name: "edu", alias: "EDUCATION"}
+            ]
+        }
+        vm.selected = {
+            sectionType:1,
+            item: vm.items[0],
+            order:vm.orderDropDown.availableSections[0],
+            section:vm.SectionListDropDown.availableSections[0]
+        };
+        vm.selected.sectionName = ''
 
         vm.ok = function () {
+            SectionListService.setNewSection(angular.copy(vm.selected))
             $uibModalInstance.close(vm.selected.item);
         };
 
         vm.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+
+
+
+        // vm.SectionListDropDown.selectedOption = vm.SectionListDropDown.availableSections[0];
+
     }
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var ModalInstanceCtrl = function($scope, $uibModalInstance, $uibModal, item) {
-//
-//     vm.item = item;
-//
-//     vm.ok = function () {
-//         $uibModalInstance.close();
-//     };
-//
-//     vm.cancel = function () {
-//         $uibModalInstance.dismiss('cancel');
-//     };
-// }
