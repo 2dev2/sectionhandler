@@ -29,7 +29,6 @@
           // resolve: ProfileController.resolve,
           resolve:{
               _sectionList : ['sectionListService',function(sectionListService){
-                  console.log(sectionListService,"dev")
                   return sectionListService.getSectionList()
               }]
           },
