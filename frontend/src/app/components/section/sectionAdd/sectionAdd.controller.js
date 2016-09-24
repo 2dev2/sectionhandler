@@ -10,9 +10,7 @@
     /** @ngInject */
     function sectionAddController($log,$uibModal,$state,SectionListService) {
         var vm = this;
-        $log.debug("add")
-        vm.name = 'theNameHasBeenPassed';
-        vm.items = SectionListService.getnewSectionListDefault()
+        vm.items = SectionListService.getSectionList()
         vm.positionDropDown = {
             availableOptions: [
                 {id: '0', name: "above", alias: "Above"},
@@ -20,12 +18,7 @@
             ]
         };
         vm.positionDropDown.selectedOption=vm.positionDropDown.availableOptions[0];
-
-        vm.availableSection = SectionListService.selectedSectionListFn()
-        console.log(vm.availableSection)
         vm.animationsEnabled = true;
-
-
         vm.open = function (size) {
             var modalInstance = $uibModal.open({
                 animation: vm.animationsEnabled,
