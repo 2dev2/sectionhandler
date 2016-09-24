@@ -10,7 +10,7 @@
         var sectionList = [
             {
                 id:1,
-                sectionName:'a1',
+                sectionName:'BIODATA',
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{},
@@ -22,7 +22,7 @@
             },
             {
                 id:2,
-                sectionName:'a2',
+                sectionName:'EDUCATION',
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{},

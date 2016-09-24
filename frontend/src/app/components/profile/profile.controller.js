@@ -16,7 +16,7 @@
     /** @ngInject */
     function ProfileController($state,_sectionList) {
         var vm = this;
-        vm.sectionList = [1,2,3,4]
+        vm.sectionList = _sectionList
         console.log($state,vm.sectionList,_sectionList)
     }
 
