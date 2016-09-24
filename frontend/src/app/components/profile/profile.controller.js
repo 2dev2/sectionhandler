@@ -5,21 +5,19 @@
         .module('frontend')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$state','_sectionList']
+    ProfileController.$inject = ['$log','$state','_sectionList']
 
     // ProfileController.resolve = {
-    //     _sectionList :['sectionListService',function(sectionListService){
-    //         return sectionListService.getSectionList()
+    //     _sectionList :['SectionListService',function(SectionListService){
+    //         return SectionListService.getSectionList()
     //     }]
     // }
 
     /** @ngInject */
-    function ProfileController($state,_sectionList) {
+    function ProfileController($log,$state,_sectionList) {
         var vm = this;
         vm.sectionList = _sectionList
-        console.log($state,vm.sectionList,_sectionList)
+        // $log.debug($state,vm.sectionList,_sectionList)
     }
-
-
 
 })();

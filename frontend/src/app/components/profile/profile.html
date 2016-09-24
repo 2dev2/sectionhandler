@@ -1,5 +1,9 @@
-<div>profile View
-    <div ng-repeat = "section in profileCtrl.sectionList track by $index">
-        {{section.sectionName}}
+<div>
+    <div class="profile_view header_color">
+        ProfileView
+        <button type="button" class="btn btn-primary new_section_button" >add new Section</button>
+    </div>
+    <div class="section-list" ng-repeat = "sectionData in profileCtrl.sectionList track by $index">
+        <section section-data="sectionData"></section>
     </div>
 </div>

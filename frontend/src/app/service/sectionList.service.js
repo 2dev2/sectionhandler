@@ -3,10 +3,10 @@
 
     angular
         .module('frontend')
-        .service('sectionListService', sectionListService);
+        .service('SectionListService', SectionListService);
 
     /** @ngInject */
-    function sectionListService() {
+    function SectionListService() {
         var sectionList = [
             {
                 id:1,
@@ -15,6 +15,12 @@
                 logo: 'angular.png',
                 position:{},
                 OrderIndex:1,
+                headerSectionOpeartion  :[
+                    'edit',
+                    'delete',
+                    'move'
+                ],
+                fieldOperation:['add-group','craete feild group'],
                 field:[
                     {field1:{id:4,name:'profile'}},
                     {field2:{id:4,name:'signup'}}
@@ -27,6 +33,8 @@
                 logo: 'angular.png',
                 position:{},
                 OrderIndex:2,
+                headerSectionOpeartion:['default'],
+                fieldOperation:['add-group','craete feild group'],
                 field:[
                     {field1:{id:5,name:'profile'}},
                     {field2:{id:6,name:'signup'}}

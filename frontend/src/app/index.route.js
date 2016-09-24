@@ -28,13 +28,13 @@
         controllerAs: 'profileCtrl',
           // resolve: ProfileController.resolve,
           resolve:{
-              _sectionList : ['sectionListService',function(sectionListService){
-                  return sectionListService.getSectionList()
+              _sectionList : ['SectionListService',function(SectionListService){
+                  return SectionListService.getSectionList()
               }]
           },
          params: {
             settings: {}
-          },
+          }
       })
       // .state('startGamePage.gameOver', {
       //   // url: 'Game',
