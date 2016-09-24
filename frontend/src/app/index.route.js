@@ -14,7 +14,8 @@
         abstract:true
       })
       .state('home', {
-         url: '/',
+          url: '/',
+         //  parent:'app',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'mainCtrl'
@@ -43,6 +44,22 @@
         controller: 'sectionAddController',
         controllerAs: 'sectionAddCtrl'
       })
+        .state('signup', {
+            url: 'signup',
+            parent:'home',
+            templateUrl: 'app/components/signup/signup.html',
+            controller: 'SignupController',
+            controllerAs: 'signupCtrl',
+            // resolve: ProfileController.resolve,
+            // resolve:{
+            //     _sectionList : ['SectionListService',function(SectionListService){
+            //         return SectionListService.getSectionList()
+            //     }]
+            // },
+            // params: {
+            //     settings: {}
+            // }
+        })
       //  .state('startGamePage.retryGame', {
       //   // url: 'Game',
       //   templateUrl: 'app/components/retryGame/retryGame.html',
@@ -50,7 +67,7 @@
       //   controllerAs: 'retryGameCtrl',
       // })
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/profile');
   }
 
 })();
