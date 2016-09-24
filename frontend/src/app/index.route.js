@@ -37,7 +37,7 @@
           }
       })
       .state('sectionAdd', {
-        url: '',
+        url: '/sectionAdd',
           parent:'profile',
         templateUrl: 'app/components/section/sectionAdd/sectionAdd.html',
         controller: 'sectionAddController',

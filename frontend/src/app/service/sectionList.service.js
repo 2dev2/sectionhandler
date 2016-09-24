@@ -14,7 +14,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{},
-                OrderIndex:1,
+                OrderIndex:2,
                 headerSectionOpeartion  :[
                     'edit',
                     'delete',
@@ -32,7 +32,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{},
-                OrderIndex:2,
+                OrderIndex:1,
                 headerSectionOpeartion:['default'],
                 fieldOperation:['add-group','craete feild group'],
                 field:[
@@ -55,10 +55,43 @@
 
 
         ];
+        var newSectionListDefaultArray = []
+        var newSectionListDefault = [
+            {
+                id:1,
+                sectionName:'BIODATA',
+                description: 'HTML enhanced for web apps!',
+                logo: 'angular.png',
+                position:{},
+                OrderIndex:1,
+                headerSectionOpeartion  :[
+                    'edit',
+                    'delete',
+                    'move'
+                ],
+                fieldOperation:['add-group','craete feild group'],
+                field:[]
+            },
+            {
+                id:2,
+                sectionName:'EDUCATION',
+                description: 'HTML enhanced for web apps!',
+                logo: 'angular.png',
+                position:{},
+                OrderIndex:2,
+                headerSectionOpeartion:['default'],
+                fieldOperation:['add-group','craete feild group'],
+                field:[]
+            }
+        ];
 
         this.getSectionList =getSectionList
+        this.getnewSectionListDefault = getnewSectionListDefault
         function getSectionList() {
             return sectionList;
+        }
+        function getnewSectionListDefault() {
+            return newSectionListDefault;
         }
     }
 
