@@ -49,25 +49,11 @@
             parent:'home',
             templateUrl: 'app/components/signup/signup.html',
             controller: 'SignupController',
-            controllerAs: 'signupCtrl',
-            // resolve: ProfileController.resolve,
-            // resolve:{
-            //     _sectionList : ['SectionListService',function(SectionListService){
-            //         return SectionListService.getSectionList()
-            //     }]
-            // },
-            // params: {
-            //     settings: {}
-            // }
-        })
-      //  .state('startGamePage.retryGame', {
-      //   // url: 'Game',
-      //   templateUrl: 'app/components/retryGame/retryGame.html',
-      //   controller: 'retryGameController',
-      //   controllerAs: 'retryGameCtrl',
-      // })
+            controllerAs: 'signupCtrl'
 
-    $urlRouterProvider.otherwise('/profile');
+        })
+
+    $urlRouterProvider.otherwise('/');
   }
 
 })();

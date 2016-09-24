@@ -13,11 +13,15 @@
     vm.data = "main controller"
     vm.whichMenuSelectedFromSidebar = whichMenuSelectedFromSidebar;
     function whichMenuSelectedFromSidebar(menu){
+      console.log("enter in state",menu)
       //goto This state
-      $state.go(menu)
+      // if($state.is(menu))
+      //     ;
+      // else
+      //   $state.go(menu)
       // $state.go('transition', {destination:'menu'});
       // $state.go(menu, {}, {reload: true,inherit: false, notify: true});
-      $state.transitionTo(menu, null, {'reload':true});
+      // $state.transitionTo(menu, null, {'reload':true});
 
 
 //       $state.go('new-state');
