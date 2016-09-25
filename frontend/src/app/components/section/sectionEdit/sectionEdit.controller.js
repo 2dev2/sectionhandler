@@ -31,21 +31,12 @@
                 size: size,
                 resolve: {
                     items: function () {
-                        console.log(vm.items,"edit this")
                         return vm.items;
                     },
                     order:function(){
                         return vm.positionDropDown
                     },
                     selectedItem:function(){
-                        console.log(vm.items)
-                        // var releativeSection = {}
-                        // releativeSection =  {id: '0', alias: vm.items.relativeSection}
-                        // if(vm.items.relativeSection=="BIODATA")
-                        //     releativeSection.name = 'bio'
-                        // else
-                        //         releativeSection.name = 'edu'
-
                         var selectedItem = { }
                         selectedItem.sectionType = 1
                         selectedItem.items = vm.items
@@ -57,18 +48,10 @@
                 }
             });
             modalInstance.result.then(function (selectedItem) {
-                console.log(selectedItem,"result")
-                // vm.selected1.sectionName = ''
+                $log.info(selectedItem,"result")
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
-            // modalInstance.opened.then(function (selectedItem) {
-            //     console.log(selectedItem,"opened")
-            //     vm.selected = selectedItem;
-            // }, function () {
-            //     $log.info('Modal dismissed at: ' + new Date());
-            // });
-
             $state.go('profile')
         };
 
@@ -96,39 +79,30 @@
                 {id: '1', name: "down", alias: "Down"}
             ]
         };
-        // vm.orderDropDown.selectedOption = vm.orderDropDown.availableSections[0];
-
         vm.SectionListDropDown = {
             availableSections: [
                 {id: '0', name: "bio", alias: "BIODATA"},
                 {id: '1', name: "edu", alias: "EDUCATION"}
             ]
         }
-        vm.selectedItem = { }
-        vm.selectedItem = {
-            sectionType:1,
-            items: vm.items[0],
-            order:vm.orderDropDown.availableSections[0],
-            section:vm.SectionListDropDown.availableSections[0],
-            sectionName:''
-        };
-        // selectedItem.sectionType = 1
-        // selectedItem.items = vm.items
-        // selectedItem.order = vm.items.position
-        // selectedItem.section = vm.items.relativeSection
-        // selectedItem.sectionName = vm.items.sectionName
-        // return selectedItem;
-         vm.selectedItem.order.name = selectedItem.order
-        vm.selectedItem.section.name = selectedItem.section
-        vm.selectedItem.sectionName = selectedItem.sectionName
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%",vm.selectedItem)
+        vm.selectedItem = selectedItem
+        vm.selectedItem.items = items
 
-
+        function getProperObject(prop,value,objList){
+            var res = ''
+            objList.filter(function(obj){
+                if(obj[prop]==value) {
+                    res = obj;
+                }
+            })
+            return res;
+        }
 
         vm.ok = function () {
+            vm.selectedItem.order = getProperObject('name',vm.selectedItem.order.name,vm.orderDropDown.availableSections)
+            vm.selectedItem.section = getProperObject('name',vm.selectedItem.section.name,vm.SectionListDropDown.availableSections)
             $uibModalInstance.close(vm.selectedItem.items);
             SectionEditService.editSection(angular.copy(vm.selectedItem))
-            // $event.stopPropagation();
         };
 
         vm.cancel = function () {

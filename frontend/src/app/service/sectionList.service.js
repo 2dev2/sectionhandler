@@ -9,13 +9,14 @@
     /** @ngInject */
     function SectionListService() {
         var sectionList = [
+
             {
                 id:1,
                 sectionName:'BIODATA',
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
-                position:'above',
-                relativeSection:'EDUCATION',
+                position:{id: '0', name: "above", alias: "Above"},
+                relativeSection: {id: '1', name: "edu", alias: "EDUCATION"},
                 OrderIndex:2,
                 headerSectionOpeartion  :[
                     {operation:'edit'},
@@ -33,8 +34,8 @@
                 sectionName:'EDUCATION',
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
-                position:'below',
-                relativeSection:'BIODATA',
+                position:{id: '1', name: "down", alias: "Down"},
+                relativeSection:{id: '0', name: "bio", alias: "BIODATA"},
                 OrderIndex:1,
                 headerSectionOpeartion:[{operation:'default'}],
                 fieldOperation:['add-field','create field group'],

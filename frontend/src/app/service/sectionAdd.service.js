@@ -27,8 +27,8 @@
                     switch(prop){
                         case 'id': res[prop] = idcnt++;break;
                         case 'sectionName' : res[prop] = section[prop]; break;
-                        case 'position' : res[prop] = section.order.alias; break;
-                        case 'relativeSection': res[prop] = section.section.alias;break
+                        case 'position' : res[prop] = section.order; break;
+                        case 'relativeSection': res[prop] = section.section;break
                         default :
                             if (typeof defaultSectionProp[prop] !=="object") res[prop] = '' ;
                             else{
