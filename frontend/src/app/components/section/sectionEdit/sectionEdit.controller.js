@@ -11,7 +11,7 @@
     function sectionEditController($log,$uibModal,$state,$stateParams,SectionListService) {
         var vm = this;
         console.log('$stateParams',$stateParams)
-        vm.item =  {} //$stateParams.section;
+        vm.items = $stateParams.section; //SectionListService.getSectionList() // {} //$stateParams.section;
         vm.positionDropDown = {
             availableOptions: [
                 {id: '0', name: "above", alias: "Above"},
@@ -30,8 +30,8 @@
                 controllerAs: '$ctrl',
                 size: size,
                 resolve: {
-                    item: function () {
-                        return vm.item;
+                    items: function () {
+                        return vm.items;
                     },
                     order:function(){
                         return vm.positionDropDown
@@ -58,12 +58,12 @@
         .module('frontend')
         .controller('ModalInstanceCtrl', ModalInstanceCtrl);
 
-    ModalInstanceCtrl.$inject = ['$uibModalInstance','item','SectionEditService']
+    ModalInstanceCtrl.$inject = ['$uibModalInstance','items','SectionEditService']
 
     /** @ngInject */
-     function ModalInstanceCtrl($uibModalInstance,item,SectionEditService) {
+     function ModalInstanceCtrl($uibModalInstance,items,SectionEditService) {
         var vm = this;
-        vm.item = item
+         vm.items= items
         vm.orderDropDown = {
             availableSections: [
                 {id: '0', name: "above", alias: "Above"},
@@ -80,15 +80,15 @@
         }
         vm.selected = {
             sectionType:1,
-            item: vm.item,
+            items: vm.items,
             order:vm.orderDropDown.availableSections[0],
             section:vm.SectionListDropDown.availableSections[0]
         };
-        vm.selected.sectionName =  vm.selected.item.sectionName
+        vm.selected.sectionName =  vm.selected.items.sectionName
 
         vm.ok = function () {
             SectionEditService.editSection(angular.copy(vm.selected))
-            $uibModalInstance.close(vm.selected.item);
+            $uibModalInstance.close(vm.selected.items);
         };
 
         vm.cancel = function () {
