@@ -17,9 +17,9 @@
                 position:'above',
                 OrderIndex:2,
                 headerSectionOpeartion  :[
-                    'edit',
-                    'delete',
-                    'move'
+                    {operation:'edit'},
+                    {operation:'delete'},
+                    {operation:'move'}
                 ],
                 fieldOperation:['add-field','create field group'],
                 field:[
@@ -34,7 +34,7 @@
                 logo: 'angular.png',
                 position:'below',
                 OrderIndex:1,
-                headerSectionOpeartion:['default'],
+                headerSectionOpeartion:[{operation:'default'}],
                 fieldOperation:['add-field','create field group'],
                 field:[
                     {field1:{id:5,name:'profile'}},

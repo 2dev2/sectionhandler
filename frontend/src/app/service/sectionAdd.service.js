@@ -33,8 +33,14 @@
                             if (typeof defaultSectionProp[prop] !=="object") res[prop] = '' ;
                             else{
                                 res[prop] = []
-                                defaultSectionProp[prop].forEach(function(opearation){
-                                    res[prop].push(opearation)
+                                defaultSectionProp[prop].forEach(function(opearation1){
+                                    if(prop=='headerSectionOpeartion'){
+                                        var obj = {}
+                                        obj.operation = opearation1
+                                        res[prop].push(obj)
+                                    }else {
+                                        res[prop].push(opearation1)
+                                    }
                                 })
 
                             }
