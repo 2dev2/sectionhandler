@@ -44,6 +44,27 @@
         controller: 'sectionAddController',
         controllerAs: 'sectionAddCtrl'
       })
+        .state('sectionedit', {
+            url: '/sectionEdit',
+            parent:'profile',
+            templateUrl: 'app/components/section/sectionEdit/sectionEdit.html',
+            controller: 'sectionEditController',
+            controllerAs: 'sectionEditCtrl'
+        })
+        .state('sectiondelete', {
+            url: '/sectionDelete',
+            parent:'profile',
+            templateUrl: 'app/components/section/sectionDelete/sectionDelete.html',
+            controller: 'sectionDeleteController',
+            controllerAs: 'sectionDeleteCtrl'
+        })
+        .state('sectionmove', {
+            url: '/sectionMove',
+            parent:'profile',
+            templateUrl: 'app/components/section/sectionMove/sectionMove.html',
+            controller: 'sectionMoveController',
+            controllerAs: 'sectionMoveCtrl'
+        })
         .state('signup', {
             url: 'signup',
             parent:'home',

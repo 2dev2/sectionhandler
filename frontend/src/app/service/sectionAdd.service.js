@@ -42,7 +42,6 @@
                                         res[prop].push(opearation1)
                                     }
                                 })
-
                             }
                             break;
                     }

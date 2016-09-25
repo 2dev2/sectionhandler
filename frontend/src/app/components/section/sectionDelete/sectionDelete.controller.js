@@ -3,12 +3,12 @@
 
     angular
         .module('frontend')
-        .controller('sectionEditController', sectionEditController);
+        .controller('sectionDeleteController', sectionDeleteController);
 
-    sectionEditController.$inject = ['$log','$uibModal','$state','SectionListService']
+    sectionDeleteController.$inject = ['$log','$uibModal','$state','SectionListService']
 
     /** @ngInject */
-    function sectionEditController($log,$uibModal,$state,SectionListService) {
+    function sectionDeleteController($log,$uibModal,$state,SectionListService) {
         var vm = this;
         vm.items = SectionListService.getSectionList()
         vm.positionDropDown = {
@@ -93,6 +93,10 @@
         vm.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+
+
+
+        // vm.SectionListDropDown.selectedOption = vm.SectionListDropDown.availableSections[0];
 
     }
 })();
