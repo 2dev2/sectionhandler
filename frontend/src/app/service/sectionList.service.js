@@ -15,6 +15,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:'above',
+                relativeSection:'EDUCATION',
                 OrderIndex:2,
                 headerSectionOpeartion  :[
                     {operation:'edit'},
@@ -33,6 +34,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:'below',
+                relativeSection:'BIODATA',
                 OrderIndex:1,
                 headerSectionOpeartion:[{operation:'default'}],
                 fieldOperation:['add-field','create field group'],
