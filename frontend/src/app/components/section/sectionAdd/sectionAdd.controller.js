@@ -27,6 +27,7 @@
                 templateUrl: 'app/components/section/sectionAdd/sectionAdd.html',
                 controller: 'ModalInstanceCtrl',
                 controllerAs: '$ctrl',
+                // bindToController:true,
                 size: size,
                 resolve: {
                     items: function () {
@@ -38,10 +39,17 @@
                 }
             });
             modalInstance.result.then(function (selectedItem) {
-                vm.selected = selectedItem;
+                console.log(selectedItem,"result")
+                // vm.selected1.sectionName = ''
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
+            // modalInstance.opened.then(function (selectedItem) {
+            //     console.log(selectedItem,"opened")
+            //     vm.selected = selectedItem;
+            // }, function () {
+            //     $log.info('Modal dismissed at: ' + new Date());
+            // });
 
             $state.go('profile')
         };
@@ -77,17 +85,18 @@
                 {id: '1', name: "edu", alias: "EDUCATION"}
             ]
         }
-        vm.selected = {
+        vm.selectedItem = {
             sectionType:1,
-            item: vm.items[0],
+            items: vm.items[0],
             order:vm.orderDropDown.availableSections[0],
-            section:vm.SectionListDropDown.availableSections[0]
+            section:vm.SectionListDropDown.availableSections[0],
+            sectionName:''
         };
-        vm.selected.sectionName = ''
+
 
         vm.ok = function () {
-            SectionAddService.setNewSection(angular.copy(vm.selected))
-            $uibModalInstance.close(vm.selected.item);
+            $uibModalInstance.close(vm.selectedItem.items);
+            SectionAddService.setNewSection(angular.copy(vm.selectedItem))
         };
 
         vm.cancel = function () {

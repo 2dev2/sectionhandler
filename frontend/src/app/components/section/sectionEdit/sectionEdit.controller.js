@@ -38,11 +38,11 @@
                     }
                 }
             });
-            modalInstance.result.then(function (selectedItem) {
-                vm.selected = selectedItem;
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
+            // modalInstance.result.then(function (selectedItem) {
+            //     vm.selected = selectedItem;
+            // }, function () {
+            //     $log.info('Modal dismissed at: ' + new Date());
+            // });
 
             $state.go('profile')
         };
@@ -82,18 +82,19 @@
             sectionType:1,
             items: vm.items,
             order:vm.orderDropDown.availableSections[0],
-            section:vm.SectionListDropDown.availableSections[0]
+            section:vm.SectionListDropDown.availableSections[0],
+            sectionName : vm.items.sectionName
         };
-        vm.selected.sectionName =  vm.selected.items.sectionName
+        // vm.selected.sectionName =  vm.selected.items.sectionName
 
-        vm.ok = function () {
-            SectionEditService.editSection(angular.copy(vm.selected))
-            $uibModalInstance.close(vm.selected.items);
-        };
-
-        vm.cancel = function () {
-            $uibModalInstance.dismiss('cancel');
-        };
+        // vm.ok = function () {
+        //     SectionEditService.editSection(angular.copy(vm.selected))
+        //     $uibModalInstance.close(vm.selected.items);
+        // };
+        //
+        // vm.cancel = function () {
+        //     $uibModalInstance.dismiss('cancel');
+        // };
 
     }
 })();
