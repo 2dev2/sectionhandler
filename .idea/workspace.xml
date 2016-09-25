@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af17549e-6084-4923-b3fa-0c58c00c469e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.directive.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.directive.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/service/navbar.service.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/popup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/popup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/sectionDelete.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/sectionDelete.directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/sectionDelete.directive.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/sectionDelete.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectiondelete/sectionDelete.scss" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/section.html" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/index.route.js" afterPath="$PROJECT_DIR$/frontend/src/app/index.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/index.run.js" afterPath="$PROJECT_DIR$/frontend/src/app/index.run.js" />
     </list>
     <ignored path="sectionhandler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +29,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sectionEdit.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sectionEdit.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="584">
+              <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sectionEdit.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="5" column="57" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sectionAdd.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="37" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/section.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              <caret line="4" column="64" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -70,88 +72,63 @@
       <file leaf-file-name="index.route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/index.route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+            <state relative-caret-position="291">
+              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
                 <element signature="e#211#291#0" expanded="false" />
                 <element signature="e#314#509#0" expanded="false" />
                 <element signature="e#535#1026#0" expanded="false" />
-                <marker date="1474792568074" expanded="false" signature="2153:2364" placeholder="{&quot;url&quot;: 'signup'...}" />
+                <marker date="1474800650132" expanded="false" signature="2216:2427" placeholder="{&quot;url&quot;: 'signup'...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sectionAdd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sectionMove.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sectionMove.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sectionDelete.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.html">
+      <file leaf-file-name="sectionEdit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="16" column="111" selection-start-line="0" selection-start-column="4" selection-end-line="34" selection-end-column="10" />
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sectionMove.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.controller.js">
+      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1059">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="396">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/popup.html">
+      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/sideBar/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sectionDelete.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sectionDelete.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.run.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/index.run.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -182,13 +159,11 @@
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/section.scss" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/section.directive.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.directive.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/index.run.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/main/main.html" />
         <option value="$PROJECT_DIR$/frontend/bower.json" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/profile/popup.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/popup.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/section.directive.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.scss" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.html" />
@@ -204,11 +179,14 @@
         <option value="$PROJECT_DIR$/frontend/src/app/components/profile/profile.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.controller.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.controller.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/index.run.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/section.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/index.route.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionMove/sectionMove.controller.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.controller.js" />
       </list>
     </option>
   </component>
@@ -496,75 +474,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sectionMove" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="section" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="sectionEdit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="section" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionDelete" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -663,12 +573,12 @@
       <updated>1474610206198</updated>
       <workItem from="1474610207698" duration="69085000" />
       <workItem from="1474748600181" duration="7503000" />
-      <workItem from="1474790063930" duration="2637000" />
+      <workItem from="1474790063930" duration="6953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80362000" />
+    <option name="totallyTimeSpent" value="84678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="-4" width="1307" height="772" extended-state="6" />
@@ -732,13 +642,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/sideBar/sidebar.directive.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/sideBar/sidebar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -771,13 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/index.run.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -870,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/signup/signup.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -930,13 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/sideBar/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1002,26 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/service/navbar.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1038,14 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="4" column="115" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/section.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1082,19 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/index.route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-          <folding>
-            <element signature="e#211#291#0" expanded="false" />
-            <element signature="e#314#509#0" expanded="false" />
-            <element signature="e#535#1026#0" expanded="false" />
-            <marker date="1474792568074" expanded="false" signature="2153:2364" placeholder="{&quot;url&quot;: 'signup'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1116,18 +961,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionDelete/sectionDelete.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/index.run.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/sideBar/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/section.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/index.route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="e#211#291#0" expanded="false" />
+            <element signature="e#314#509#0" expanded="false" />
+            <element signature="e#535#1026#0" expanded="false" />
+            <marker date="1474800650132" expanded="false" signature="2216:2427" placeholder="{&quot;url&quot;: 'signup'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="37" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
           <folding />
         </state>
       </provider>

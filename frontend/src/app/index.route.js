@@ -49,7 +49,10 @@
             parent:'profile',
             templateUrl: 'app/components/section/sectionEdit/sectionEdit.html',
             controller: 'sectionEditController',
-            controllerAs: 'sectionEditCtrl'
+            controllerAs: 'sectionEditCtrl',
+            params:{
+                section:{}
+            }
         })
         .state('sectiondelete', {
             url: '/sectionDelete',

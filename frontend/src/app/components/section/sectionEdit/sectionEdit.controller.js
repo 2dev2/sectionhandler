@@ -5,12 +5,13 @@
         .module('frontend')
         .controller('sectionEditController', sectionEditController);
 
-    sectionEditController.$inject = ['$log','$uibModal','$state','SectionListService']
+    sectionEditController.$inject = ['$log','$uibModal','$state','$stateParams','SectionListService']
 
     /** @ngInject */
-    function sectionEditController($log,$uibModal,$state,SectionListService) {
+    function sectionEditController($log,$uibModal,$state,$stateParams,SectionListService) {
         var vm = this;
-        vm.items = SectionListService.getSectionList()
+        console.log('$stateParams',$stateParams)
+        vm.item =  {} //$stateParams.section;
         vm.positionDropDown = {
             availableOptions: [
                 {id: '0', name: "above", alias: "Above"},
@@ -24,13 +25,13 @@
                 animation: vm.animationsEnabled,
                 ariaLabelledBy: 'modal-title',
                 ariaDescribedBy: 'modal-body',
-                templateUrl: 'app/components/section/sectionAdd/sectionAdd.html',
+                templateUrl: 'app/components/section/sectionEdit/sectionEdit.html',
                 controller: 'ModalInstanceCtrl',
                 controllerAs: '$ctrl',
                 size: size,
                 resolve: {
-                    items: function () {
-                        return vm.items;
+                    item: function () {
+                        return vm.item;
                     },
                     order:function(){
                         return vm.positionDropDown
@@ -57,12 +58,12 @@
         .module('frontend')
         .controller('ModalInstanceCtrl', ModalInstanceCtrl);
 
-    ModalInstanceCtrl.$inject = ['$uibModalInstance','items','SectionAddService']
+    ModalInstanceCtrl.$inject = ['$uibModalInstance','item','SectionEditService']
 
     /** @ngInject */
-     function ModalInstanceCtrl($uibModalInstance,items,SectionAddService) {
+     function ModalInstanceCtrl($uibModalInstance,item,SectionEditService) {
         var vm = this;
-        vm.items = items
+        vm.item = item
         vm.orderDropDown = {
             availableSections: [
                 {id: '0', name: "above", alias: "Above"},
@@ -79,14 +80,14 @@
         }
         vm.selected = {
             sectionType:1,
-            item: vm.items[0],
+            item: vm.item,
             order:vm.orderDropDown.availableSections[0],
             section:vm.SectionListDropDown.availableSections[0]
         };
-        vm.selected.sectionName = ''
+        vm.selected.sectionName =  vm.selected.item.sectionName
 
         vm.ok = function () {
-            SectionAddService.setNewSection(angular.copy(vm.selected))
+            SectionEditService.editSection(angular.copy(vm.selected))
             $uibModalInstance.close(vm.selected.item);
         };
 

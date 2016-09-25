@@ -2,7 +2,7 @@
     <!--<section-header></section-header>-->
     <div class="section_header header_color">
         <span>{{sectionCtrl.sectionData.sectionName}}</span>
-        <span ui-sref="{{'section'+headerOp.operation}}" class="section_op" ng-repeat = "headerOp in sectionCtrl.sectionData.headerSectionOpeartion">
+        <span ui-sref="{{'section'+headerOp.operation}}({section:sectionCtrl.sectionData})" class="section_op" ng-repeat = "headerOp in sectionCtrl.sectionData.headerSectionOpeartion">
             {{headerOp.operation}}
         </span>
         <span class="field_op" ng-repeat = "headerFieldOp in sectionCtrl.sectionData.fieldOperation">
