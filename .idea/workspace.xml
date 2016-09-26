@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af17549e-6084-4923-b3fa-0c58c00c469e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" />
     </list>
     <ignored path="sectionhandler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,29 +26,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sectionEdit.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sectionList.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+            <state relative-caret-position="151">
+              <caret line="134" column="58" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="58" />
               <folding>
                 <element signature="e#626#1373#0" expanded="false" />
                 <element signature="e#1238#1359#0" expanded="false" />
                 <element signature="e#1387#2010#0" expanded="false" />
-                <element signature="e#3148#3248#0" expanded="false" />
-                <element signature="e#3305#3675#0" expanded="false" />
-                <element signature="e#3899#6520#0" expanded="false" />
-                <element signature="e#6578#7269#0" expanded="false" />
+                <element signature="e#3291#3391#0" expanded="false" />
+                <element signature="e#3448#3818#0" expanded="false" />
+                <element signature="e#6713#7404#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sectionAdd.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sectionAdd.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="7" column="93" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+            <state relative-caret-position="453">
+              <caret line="40" column="15" selection-start-line="30" selection-start-column="12" selection-end-line="40" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -66,10 +76,10 @@
       <file leaf-file-name="sectionEdit.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="35" column="101" selection-start-line="35" selection-start-column="101" selection-end-line="35" selection-end-column="101" />
+            <state relative-caret-position="104">
+              <caret line="91" column="41" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
               <folding>
-                <element signature="e#4254#5650#0" expanded="false" />
+                <element signature="e#5565#6961#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,11 +88,10 @@
       <file leaf-file-name="sectionAdd.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="-435">
+              <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
               <folding>
                 <element signature="e#1279#1377#0" expanded="false" />
-                <element signature="e#2485#2898#0" expanded="false" />
                 <element signature="e#2946#4330#0" expanded="false" />
               </folding>
             </state>
@@ -124,16 +133,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
               <caret line="98" column="7563" selection-start-line="98" selection-start-column="7563" selection-end-line="98" selection-end-column="7563" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/components/profile/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="115" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -185,14 +184,14 @@
         <option value="$PROJECT_DIR$/frontend/src/app/index.run.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/main/main.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/index.route.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/index.config.js" />
         <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
+        <option value="$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js" />
       </list>
     </option>
   </component>
@@ -445,40 +444,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="section" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionAdd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sectionhandler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -556,18 +521,18 @@
       <workItem from="1474866178637" duration="9648000" />
       <workItem from="1474877346722" duration="10370000" />
       <workItem from="1474894510898" duration="3103000" />
-      <workItem from="1474897774473" duration="1168000" />
+      <workItem from="1474897774473" duration="6773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142385000" />
+    <option name="totallyTimeSpent" value="147990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="24" width="1307" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40681997" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18001586" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,28 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
-          <folding>
-            <element signature="e#2035#2099#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="e#1279#1377#0" expanded="false" />
-            <element signature="e#2485#2898#0" expanded="false" />
-            <element signature="e#2946#4330#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -905,32 +848,6 @@
         <state relative-caret-position="18">
           <caret line="98" column="7563" selection-start-line="98" selection-start-column="7563" selection-end-line="98" selection-end-column="7563" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="101" selection-start-line="35" selection-start-column="101" selection-end-line="35" selection-end-column="101" />
-          <folding>
-            <element signature="e#4254#5650#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-          <folding>
-            <element signature="e#626#1373#0" expanded="false" />
-            <element signature="e#1238#1359#0" expanded="false" />
-            <element signature="e#1387#2010#0" expanded="false" />
-            <element signature="e#3148#3248#0" expanded="false" />
-            <element signature="e#3305#3675#0" expanded="false" />
-            <element signature="e#3899#6520#0" expanded="false" />
-            <element signature="e#6578#7269#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,10 +883,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <folding>
+            <element signature="e#1279#1377#0" expanded="false" />
+            <element signature="e#2946#4330#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="134" column="58" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="58" />
+          <folding>
+            <element signature="e#626#1373#0" expanded="false" />
+            <element signature="e#1238#1359#0" expanded="false" />
+            <element signature="e#1387#2010#0" expanded="false" />
+            <element signature="e#3291#3391#0" expanded="false" />
+            <element signature="e#3448#3818#0" expanded="false" />
+            <element signature="e#6713#7404#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="91" column="41" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
+          <folding>
+            <element signature="e#5565#6961#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="7" column="93" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+        <state relative-caret-position="453">
+          <caret line="40" column="15" selection-start-line="30" selection-start-column="12" selection-end-line="40" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/components/section/sectionEdit/sectionEdit.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
           <folding />
         </state>
       </provider>

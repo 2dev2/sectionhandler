@@ -16,11 +16,13 @@
         ]
         this.editSection = editSection
         function editSection(notFormatedsection){
-            var section = notFormatedsection.items
+            var oldsectionName = notFormatedsection.items.sectionName
+            var section =JSON.parse(JSON.stringify(notFormatedsection.items)) // notFormatedsection.items
             section.position = notFormatedsection.order
             section.relativeSection = notFormatedsection.section
+            section.sectionName = notFormatedsection.sectionName
+            convertAddInAvailableRelativeSection(section,oldsectionName)
 
-            console.log(section)
             var list = SectionListService.getSectionList()
             // var convertProperSection = defaultSectionPropAdd(section)
 
@@ -40,6 +42,36 @@
             SectionListService.setSectionList(organizedList)
         }
 
+        function convertAddInAvailableRelativeSection(obj,oldName){
+            var sectionName = obj.sectionName
+            var listObj = SectionListService.getAvailableRelativeSection()
+            if(listObj.hasOwnProperty(oldName))
+                delete  listObj[oldName];
+            var res = {}
+            res.id = 0
+            res.name = sectionName
+            res.alias = sectionName
+            listObj[sectionName] = res;
+            // changeOldSectionName(sectionName,oldName)
+        }
+
+        function changeOldSectionName(newName,oldName){
+            var list = SectionListService.getSectionList()
+            var listObj = SectionListService.getAvailableRelativeSection()
+            list.forEach(function(obj){
+                if(obj.sectionName==oldName){
+                    obj.sectionName = newName
+                }
+
+                if(obj.relativeSection.alias==oldName){
+                    obj.relativeSection = listObj[newName]
+                }
+
+            })
+            SectionListService.setSectionList(list)
+
+
+        }
 
 
         function removefromList(index,list){
@@ -56,8 +88,8 @@
                     }
                     //delete first element
                     break;
-                case list.size-1:
-                    var ind = list.size-2
+                case list.length-1:
+                    var ind = list.length-2
                     //delete last element
                     if(list[ind].position.name=="above") {
                         list[ind].position = availableOrderPosition['down']
@@ -68,15 +100,15 @@
                     }
                     break
                 default:
-                    if((list[i-1].position.name=="below") && (list[i+1].position.name=="above")){
+                    if((list.length>2 )&& (list[i-1].position.name=="above") && (list[i+1].position.name=="down")){
                         list[i-1].relativeSection = availableRelative[list[i+1].sectionName]
                         list[i+1].relativeSection = availableRelative[list[i-1].sectionName]
                     }
-                    else if (list[i-1].position.name=="below"){
+                    else if (list[i-1].position.name=="above"){
                         list[i-1].relativeSection = availableRelative[list[i+1].sectionName]
 
                     }
-                    else if (list[i+1].position.name=="above"){
+                    else if (list[i+1].position.name=="down"){
                         list[i+1].relativeSection = availableRelative[list[i-1].sectionName]
                     }
             }

@@ -48,11 +48,23 @@
                 }
             });
             modalInstance.result.then(function (selectedItem) {
-                $log.info(selectedItem,"result")
             }, function () {
+                // $state.go('profile',null,{reload: true})
                 $log.info('Modal dismissed at: ' + new Date());
             });
-            $state.go('profile')
+            modalInstance.closed.then(function (selectedItem) {
+                $state.go('profile',null,{reload: true})
+            }, function () {
+                $state.go('profile',null,{reload: true})
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+            // modalInstance.result.then(function (selectedItem) {
+            //     $log.info(selectedItem,"result")
+            // }, function () {
+            //     $log.info('Modal dismissed at: ' + new Date());
+            // });
+            //
+            // $state.go('profile')
         };
 
         vm.open()
@@ -106,7 +118,7 @@
             if(vm.selectedItem.items.position.alias=="Above")
                 vm.selectedItem.items.position = SectionListService.getavailableOrderPosition()['above']
             else
-                vm.selectedItem.items.position = SectionListService.getavailableOrderPosition()['name']
+                vm.selectedItem.items.position = SectionListService.getavailableOrderPosition()['down']
             $uibModalInstance.close(vm.selectedItem.items);
             SectionEditService.editSection(angular.copy(vm.selectedItem))
         };

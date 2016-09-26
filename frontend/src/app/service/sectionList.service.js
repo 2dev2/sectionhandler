@@ -82,6 +82,10 @@
         function getAvailableRelativeSection(){
             return availableRelativeSection;
         }
+        function setAvailableRelativeSection( newList){
+            availableRelativeSection  = JSON.parse(JSON.stringify(newList))
+
+        }
         function getavailableOrderPosition(){
             return availableOrderPosition;
         }
@@ -107,7 +111,7 @@
             }
             return res
         }
-        
+
         /**
          * insert new section object according to its position change another object position in list
          * @param newsection
