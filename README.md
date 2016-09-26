@@ -1,7 +1,5 @@
 # sectionhandler
 
-It is a simple angular js (version 1.4) Application which perform  CRUD operation.
-
 Following steps are needed for  setup :-
 
 1- Install node and npm
