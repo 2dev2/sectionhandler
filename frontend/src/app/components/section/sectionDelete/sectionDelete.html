@@ -14,15 +14,15 @@
 
             <div class="form-group col-sm-6">
                 <label for="sectionName">sectionName:</label>
-                <input type="text" class="form-control" id="sectionName" ng-model="$ctrlDelete.selectedItem.sectionName">
+                <input readonly type="text" class="form-control" id="sectionName" ng-model="$ctrlDelete.selectedItem.sectionName">
             </div>
         </div>
         <div class="row">
             <span class="m_l">order position</span>
             <div>
-                <select id="orderDropDown" class="font-label btn col-sm-2 m_l" name="mySelect" ng-model="$ctrlDelete.selectedItem.order.name" ng-options="option.name as option.alias for option in $ctrlDelete.orderDropDown.availableSections" >
+                <select  disabled id="orderDropDown" class="font-label btn col-sm-2 m_l" name="mySelect" ng-model="$ctrlDelete.selectedItem.order.name" ng-options="option.name as option.alias for option in $ctrlDelete.orderDropDown.availableSections" >
                 </select>
-                <select id="SectionListDropDown" class="font-label btn col-sm-offset-1 col-sm-3" name="mySelect1" ng-model="$ctrlDelete.selectedItem.section.name" ng-options="option.name as option.alias for option in $ctrlDelete.SectionListDropDown.availableSections" >
+                <select disabled id="SectionListDropDown" class="font-label btn col-sm-offset-1 col-sm-3" name="mySelect1" ng-model="$ctrlDelete.selectedItem.section.name" ng-options="option.name as option.alias for option in $ctrlDelete.SectionListDropDown.availableSections" >
                 </select>
             </div>
 
