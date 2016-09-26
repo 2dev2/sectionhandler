@@ -16,9 +16,47 @@
         ]
         this.editSection = editSection
         function editSection(section){
-            console.log(section);
-             var convertProperSection = defaultSectionPropAdd(section)
+            var list = SectionListService.getSectionList()
+            // var convertProperSection = defaultSectionPropAdd(section)
+            var index = findPosition(section,list)
+            var organizedList = removefromList(index,list)
+            console.log(section)
+            // SectionListService.addInList(modifiedList,section,index)
+            // SectionAddService.addInList(organizedList,section,index)
             // SectionListService.getSectionList().push(convertProperSection)
+        }
+
+
+
+        function removefromList(index,list){
+            var availableRelative = SectionListService.getAvailableRelativeSection()
+            switch (index){
+                case 0:break;
+                case list.size-1: break;
+                default:
+                    if((list[i-1].position.name=="below") && (list[i+1].position.name=="above")){
+                        list[i-1].relativeSection = availableRelative[list[i+1].sectionName]
+                        list[i+1].relativeSection = availableRelative[list[i-1].sectionName]
+                    }
+                    else if (list[i-1].position.name=="below"){
+                        list[i-1].relativeSection = availableRelative[list[i+1].sectionName]
+
+                    }
+                    else if (list[i+1].position.name=="above"){
+                        list[i+1].relativeSection = availableRelative[list[i-1].sectionName]
+                    }
+            }
+            return list;
+
+        }
+
+        function findPosition(editsection,list){
+            var index = 0;
+            list.forEach(function(section,i){
+                if(editsection.items.sectionName==editsection.sectionName)
+                    index = i
+            })
+            return index;
         }
 
         function defaultSectionPropAdd(section){

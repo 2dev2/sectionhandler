@@ -11,18 +11,52 @@
         var idcnt = 3
         var defaultSectionProp = {id:'',sectionName:'',position:'',relativeSection:'',OrderIndex:'',headerSectionOpeartion:['edit','delete','move'],fieldOperation:[],field:[]}
         this.setNewSection = setNewSection
+        this.findIndexOFNewSection = findIndexOFNewSection
         function setNewSection(section){
-
+            var list =JSON.parse(JSON.stringify(SectionListService.getSectionList()))
             var convertProperSection = defaultSectionPropAdd(section)
             convertAddInAvailableRelativeSection(convertProperSection)
-            SectionListService.organizeList(convertProperSection,true)
+            var index = findIndexOFNewSection(convertProperSection,list)
+            var modifiedList = SectionListService.organizeList(convertProperSection,index,list)
+            modifiedList = SectionListService.addInList(modifiedList,convertProperSection,index)
+            SectionListService.setSectionList(modifiedList)
             
             // SectionListService.getSectionList().push(convertProperSection)
 
 
 
         }
+        /**find the index where we have to insert
+         * @param obj
+         * @param list
+         */
+        function findIndexOFNewSection(obj,list){
+            var index = 0;
+            if(list.length==1){
+                index = (obj.position.name=='above')?0:1
+            }
+            for(var i=0;i<list.length;i++){
+                if((list[i].sectionName==obj.relativeSection.alias) && (list[i].sectionName!=list[i].relativeSection.alias)){
+                    //choose last if down
+                    if(obj.position.name=="down") {
+                        if ((i == list.length-1) || (list[i + 1].sectionName !=obj.relativeSection.alias)) {
+                            index = i+1;
+                            break;
+                        }
+                    }
+                    //choose first
+                    else{
+                        if((i==0)||(list[i-1].sectionName!=obj.relativeSection.alias)){
+                            index = i;
+                            break;
+                        }
+                    }
+                }
 
+            }
+            return index;
+
+        }
 
         function convertAddInAvailableRelativeSection(obj){
             var sectionName = obj.sectionName

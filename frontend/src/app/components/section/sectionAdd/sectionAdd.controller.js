@@ -5,10 +5,10 @@
         .module('frontend')
         .controller('sectionAddController', sectionAddController);
 
-    sectionAddController.$inject = ['$log','$uibModal','$state','SectionListService']
+    sectionAddController.$inject = ['$log','$uibModal','$state','SectionListService','$timeout']
 
     /** @ngInject */
-    function sectionAddController($log,$uibModal,$state,SectionListService) {
+    function sectionAddController($log,$uibModal,$state,SectionListService,$timeout) {
         var vm = this;
         vm.items = SectionListService.getSectionList()
         vm.animationsEnabled = true;
@@ -34,8 +34,11 @@
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
+            $timeout(function(){
+                // $state.go('signup')
+                $state.go('profile')
+            },500)
 
-            $state.go('profile')
         };
 
         vm.open()

@@ -62,7 +62,9 @@
         this.getavailableOrderPosition = getavailableOrderPosition
         this.organizeList = organizeList
         this.getSectionList = getSectionList
+        this.addInList = addInList
         this.arrayDataInOrder = arrayDataInOrder
+        this.setSectionList = setSectionList
         /**
          * this function return all availbale section data
          * it will query the data base and return the json
@@ -71,6 +73,10 @@
         function getSectionList() {
             // arrayDataInOrder()
             return sectionList;
+        }
+        function setSectionList(newList){
+            sectionList = JSON.parse(JSON.stringify(newList))
+
         }
 
         function getAvailableRelativeSection(){
@@ -104,45 +110,14 @@
         }
 
 
-        /**find the index where we have to insert
-         * @param obj
-         * @param list
-         */
-        function findIndexOFNewSection(obj,list){
-            var index = 0;
-            if(list.length==1){
-                 index = (obj.position.name=='above')?0:1
-            }
-            for(var i=0;i<list.length;i++){
-                if((list[i].sectionName==obj.relativeSection.alias) && (list[i].sectionName!=list[i].relativeSection.alias)){
-                    //choose last if down
-                    if(obj.position.name=="down") {
-                        if ((i == list.length-1) || (list[i + 1].sectionName !=obj.relativeSection.alias)) {
-                            index = i+1;
-                            break;
-                        }
-                    }
-                    //choose first
-                    else{
-                        if((i==0)||(list[i-1].sectionName!=obj.relativeSection.alias)){
-                            index = i;
-                            break;
-                        }
-                    }
-                }
 
-            }
-            return index;
-
-        }
 
         /**
          * insert new section object according to its position change another object position in list
          * @param newsection
          */
-        function organizeList(newsection,isaddSection){
+        function organizeList(newsection,index,sectionList){
             //find the index where we have to insert
-            var index = findIndexOFNewSection(newsection,sectionList);
             var defaultIntialOjectIndex
             var i
             switch(index){
@@ -181,24 +156,26 @@
                     }
             break
             }
-            if(isaddSection){
-                var tempArray = []
-                switch(index){
-                    case 0:sectionList.unshift(newsection);break;
-                    case sectionList.length: sectionList.push(newsection);break;
-                    default:
-                        for(var j=0;j<index;j++) {
-                            tempArray.push(sectionList[j])
-                        }
-                        tempArray.push(newsection)
-                        for(j=index;j<sectionList.length;j++) {
-                            tempArray.push(sectionList[j])
-                        }
-                        sectionList =  JSON.parse(JSON.stringify(tempArray))
-                        break;
-                }
-            }
+            return sectionList;
+        }
 
+        function addInList(sectionList,newsection,index){
+            var tempArray = []
+            switch(index){
+                case 0:sectionList.unshift(newsection);break;
+                case sectionList.length: sectionList.push(newsection);break;
+                default:
+                    for(var j=0;j<index;j++) {
+                        tempArray.push(sectionList[j])
+                    }
+                    tempArray.push(newsection)
+                    for(j=index;j<sectionList.length;j++) {
+                        tempArray.push(sectionList[j])
+                    }
+                    sectionList = tempArray //  JSON.parse(JSON.stringify())
+                    break;
+            }
+            return sectionList;
         }
 
 

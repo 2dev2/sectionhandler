@@ -5,7 +5,7 @@
         .module('frontend')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$log','$uibModal','$state','_sectionList']
+    ProfileController.$inject = ['$scope','$log','$uibModal','$state','_sectionList','SectionListService']
 
     // ProfileController.resolve = {
     //     _sectionList :['SectionListService',function(SectionListService){
@@ -14,12 +14,12 @@
     // }
 
     /** @ngInject */
-    function ProfileController($log,$uibModal,$state,_sectionList) {
+    function ProfileController($scope,$log,$uibModal,$state,_sectionList,SectionListService) {
         var vm = this;
-        vm.sectionList = _sectionList
-        // var modalInstance = $uibModal.open({
-        //     templateUrl: 'app/components/profile/popup.html',
-        // });
+
+        // // if($scope.$$phase)
+        // $scope.$apply()
+        vm.sectionList = _sectionList //SectionListService.getSectionList()
         vm.sectionAdd = function () {
              $state.go('sectionAdd')
         }
