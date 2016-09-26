@@ -10,10 +10,6 @@
     function SectionAddService($log,SectionListService) {
         var idcnt = 3
         var defaultSectionProp = {id:'',sectionName:'',position:'',relativeSection:'',OrderIndex:'',headerSectionOpeartion:['edit','delete','move'],fieldOperation:[],field:[]}
-        var selectedSectionList = [
-            {id: '0', name: "bio", alias: "bio"},
-            {id: '1', name: "edu",alias: "edu"}
-        ]
         this.setNewSection = setNewSection
         function setNewSection(section){
 

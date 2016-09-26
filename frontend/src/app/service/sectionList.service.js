@@ -57,6 +57,7 @@
                 ]
             }
         ];
+        window.sectionList = sectionList
         this.getAvailableRelativeSection = getAvailableRelativeSection;
         this.getavailableOrderPosition = getavailableOrderPosition
         this.organizeList = organizeList
@@ -193,7 +194,7 @@
                         for(j=index;j<sectionList.length;j++) {
                             tempArray.push(sectionList[j])
                         }
-                        sectionList =  tempArray
+                        sectionList =  JSON.parse(JSON.stringify(tempArray))
                         break;
                 }
             }

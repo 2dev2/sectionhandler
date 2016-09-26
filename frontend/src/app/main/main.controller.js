@@ -5,15 +5,14 @@
     .module('frontend')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$state']
+  MainController.$inject = []
 
   /** @ngInject */
-  function MainController($state) {
+  function MainController() {
     var vm = this;
     vm.data = "main controller"
     vm.whichMenuSelectedFromSidebar = whichMenuSelectedFromSidebar;
-    function whichMenuSelectedFromSidebar(menu){
-      console.log("enter in state",menu)
+    function whichMenuSelectedFromSidebar(){
       //goto This state
       // if($state.is(menu))
       //     ;
