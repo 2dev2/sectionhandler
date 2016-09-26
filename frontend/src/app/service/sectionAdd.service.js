@@ -16,10 +16,31 @@
         ]
         this.setNewSection = setNewSection
         function setNewSection(section){
+
             var convertProperSection = defaultSectionPropAdd(section)
-            SectionListService.getSectionList().push(convertProperSection)
+            convertAddInAvailableRelativeSection(convertProperSection)
+            SectionListService.organizeList(convertProperSection,true)
+            
+            // SectionListService.getSectionList().push(convertProperSection)
+
+
+
         }
 
+
+        function convertAddInAvailableRelativeSection(obj){
+            var sectionName = obj.sectionName
+            var listObj = SectionListService.getAvailableRelativeSection()
+            if(listObj.hasOwnProperty(sectionName))
+                return;
+            var res = {}
+             res.id = 0
+            res.name = sectionName
+            res.alias = sectionName
+
+            listObj[sectionName] = res;
+            // listObj.cnt = listObj.cnt+1;
+        }
         function defaultSectionPropAdd(section){
             var res = {}
             for(var prop in defaultSectionProp){
