@@ -146,7 +146,7 @@
                     }
             //we have to insert above to someone------ may be two change -- based on condition
                     else{
-                         i = index + 1
+                         i = index 
                         if((sectionList[i].position.name=="above") &&(sectionList[i-1].position.name=="down") ){
                             sectionList[i].relativeSection = availableRelativeSection[newsection.sectionName]
                             sectionList[i-1].relativeSection = availableRelativeSection[newsection.sectionName]

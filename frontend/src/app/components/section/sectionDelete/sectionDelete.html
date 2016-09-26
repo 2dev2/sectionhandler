@@ -1,35 +1,35 @@
-<!--<div class="modal-dialog">-->
-    <!--<div class="modal-header">-->
-        <!--<h3 class="modal-title" id="modal-title">Add Section</h3>-->
-    <!--</div>-->
-    <!--<div class="modal-body" id="modal-body">-->
-        <!--<div class="row">-->
-            <!--<div class="col-sm-4" ng-repeat="d in [{id:1,name:'new'},{id:2,name:'default'}] track by $index">-->
-            <!--&lt;!&ndash;<input  id={{"data-type-radio-btn-"+d.id}} type="radio" name="data-type" ng-value="d.id" ng-model="$ctrl.selected.sectionType">&ndash;&gt;-->
-            <!--&lt;!&ndash;<label class="RadioButtonLabel" for={{"data-type-radio-btn-"+d.id}}&ndash;&gt;-->
-                   <!--&lt;!&ndash;ng-bind="d.name"></label>&ndash;&gt;-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
+<div class="modal-dialog">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Delete Section</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="row">
+            <div class="col-sm-4" ng-repeat="d in [{id:1,name:'new'},{id:2,name:'default'}] track by $index">
+                <!--<input  id={{"data-type-radio-btn-"+d.id}} type="radio" name="data-type" ng-value="d.id" ng-model="$ctrlDelete.selectedItem.sectionType">-->
+                <!--<label class="RadioButtonLabel" for={{"data-type-radio-btn-"+d.id}}-->
+                <!--ng-bind="d.name"></label>-->
+            </div>
+        </div>
+        <div class="row">
 
-        <!--<div class="form-group col-sm-6">-->
-            <!--<label for="sectionName">sectionName:</label>-->
-            <!--<input type="text" class="form-control" id="sectionName" ng-model="$ctrl.selected.sectionName">-->
-        <!--</div>-->
-            <!--</div>-->
-        <!--<div class="row">-->
-            <!--<span class="m_l">order position</span>-->
-            <!--<div>-->
-            <!--<select id="orderDropDown" class="font-label btn col-sm-2 m_l" name="mySelect" ng-model="$ctrl.selected.order.name" ng-options="option.name as option.alias for option in $ctrl.orderDropDown.availableSections" >-->
-            <!--</select>-->
-            <!--<select id="SectionListDropDown" class="font-label btn col-sm-offset-1 col-sm-3" name="mySelect1" ng-model="$ctrl.selected.section.name" ng-options="option.name as option.alias for option in $ctrl.SectionListDropDown.availableSections" >-->
-            <!--</select>-->
-                <!--</div>-->
+            <div class="form-group col-sm-6">
+                <label for="sectionName">sectionName:</label>
+                <input type="text" class="form-control" id="sectionName" ng-model="$ctrlDelete.selectedItem.sectionName">
+            </div>
+        </div>
+        <div class="row">
+            <span class="m_l">order position</span>
+            <div>
+                <select id="orderDropDown" class="font-label btn col-sm-2 m_l" name="mySelect" ng-model="$ctrlDelete.selectedItem.order.name" ng-options="option.name as option.alias for option in $ctrlDelete.orderDropDown.availableSections" >
+                </select>
+                <select id="SectionListDropDown" class="font-label btn col-sm-offset-1 col-sm-3" name="mySelect1" ng-model="$ctrlDelete.selectedItem.section.name" ng-options="option.name as option.alias for option in $ctrlDelete.SectionListDropDown.availableSections" >
+                </select>
+            </div>
 
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="modal-footer">-->
-        <!--<button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>-->
-        <!--<button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>-->
-    <!--</div>-->
-<!--</div>-->
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrlDelete.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrlDelete.cancel()">Cancel</button>
+    </div>
+</div>

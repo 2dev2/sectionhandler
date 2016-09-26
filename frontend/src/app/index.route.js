@@ -59,7 +59,10 @@
             parent:'profile',
             templateUrl: 'app/components/section/sectionDelete/sectionDelete.html',
             controller: 'sectionDeleteController',
-            controllerAs: 'sectionDeleteCtrl'
+            controllerAs: 'sectionDeleteCtrl',
+            params:{
+                section:{}
+            }
         })
         .state('sectionmove', {
             url: '/sectionMove',
