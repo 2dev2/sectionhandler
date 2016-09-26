@@ -5,7 +5,7 @@
     <div class="modal-body" id="modal-body">
         <div class="row">
             <div class="col-sm-4" ng-repeat="d in [{id:1,name:'new'},{id:2,name:'default'}] track by $index">
-                <input  id='{{"data-type-radio-btn-"+d.id}}' type="radio" name="data-type" ng-value="d.id" ng-model="$ctrl.selectedItem.sectionType">
+                <input  id='{{"data-type-radio-btn-"+d.id}}' type="radio" name="data-type" ng-value="d.id" ng-model="$ctrlDelete.selectedItem.sectionType">
                 <label class="RadioButtonLabel" for='{{"data-type-radio-btn-"+d.id}}'
                        ng-bind="d.name"></label>
             </div>
