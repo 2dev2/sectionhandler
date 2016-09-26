@@ -66,7 +66,10 @@
             parent:'profile',
             templateUrl: 'app/components/section/sectionMove/sectionMove.html',
             controller: 'sectionMoveController',
-            controllerAs: 'sectionMoveCtrl'
+            controllerAs: 'sectionMoveCtrl',
+            params:{
+                section:{}
+            }
         })
         .state('signup', {
             url: 'signup',

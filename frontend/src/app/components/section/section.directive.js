@@ -24,8 +24,6 @@
 
     /** @ngInject */
     function sectionController() {
-      // var vm = this;
-      // // $log.debug(vm.sectionData)
     }
   }
 
