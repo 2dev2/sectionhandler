@@ -34,10 +34,17 @@
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
-            $timeout(function(){
+
                 // $state.go('signup')
-                $state.go('profile')
-            },500)
+             $state.transitionTo('profile', null, {'reload':true, notify:true});
+            vm.$state = $state;
+            console.log(vm.$state)
+            // $scope.$watch('vm.$state.$current.locals.globals.randomValue', function (randomValue) {
+            //     $scope.random = randomValue;
+            // });
+                // $state.go('profile',{},{reload: true})
+            // $state.reload()
+
 
         };
 

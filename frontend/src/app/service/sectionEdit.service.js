@@ -4,10 +4,10 @@
     angular
         .module('frontend')
         .service('SectionEditService', SectionEditService);
-    SectionEditService.$inject = ['$log','SectionListService']
+    SectionEditService.$inject = ['$log','SectionListService','SectionAddService']
 
     /** @ngInject */
-    function SectionEditService($log,SectionListService) {
+    function SectionEditService($log,SectionListService,SectionAddService) {
         var idcnt = 3
         var defaultSectionProp = {id:'',sectionName:'',position:'',relativeSection:'',OrderIndex:'',headerSectionOpeartion:['edit','delete','move'],fieldOperation:[],field:[]}
         var selectedSectionList = [
@@ -15,24 +15,58 @@
             {id: '1', name: "edu",alias: "edu"}
         ]
         this.editSection = editSection
-        function editSection(section){
+        function editSection(notFormatedsection){
+            var section = notFormatedsection.items
+            section.position = notFormatedsection.order
+            section.relativeSection = notFormatedsection.section
+
+            console.log(section)
             var list = SectionListService.getSectionList()
             // var convertProperSection = defaultSectionPropAdd(section)
+
+            //find position delete from there modify the list
             var index = findPosition(section,list)
-            var organizedList = removefromList(index,list)
-            console.log(section)
-            // SectionListService.addInList(modifiedList,section,index)
-            // SectionAddService.addInList(organizedList,section,index)
-            // SectionListService.getSectionList().push(convertProperSection)
+            var organizedList= removefromList(index,list)
+
+
+
+            console.log(organizedList,section)
+
+            //find the correct position insert there
+            var findIndexForInsertion = SectionAddService.findIndexOFNewSection(section,organizedList);
+            // var findIndexForInsertion = findIndexForInsertionFn(section,organizedList)
+            organizedList = SectionListService.addInList(organizedList,section,findIndexForInsertion)
+            console.log(organizedList)
+            SectionListService.setSectionList(organizedList)
         }
 
 
 
         function removefromList(index,list){
+            var availableOrderPosition = SectionListService.getavailableOrderPosition()
             var availableRelative = SectionListService.getAvailableRelativeSection()
             switch (index){
-                case 0:break;
-                case list.size-1: break;
+                case 0:
+                    if(list[1].position.name=="down") {
+                        list[1].position = availableOrderPosition['above']
+                        if(list.length==2)
+                            list[1].relativeSection = availableRelative[list[0].sectionName]
+                        else
+                            list[1].relativeSection = availableRelative[list[2].sectionName]
+                    }
+                    //delete first element
+                    break;
+                case list.size-1:
+                    var ind = list.size-2
+                    //delete last element
+                    if(list[ind].position.name=="above") {
+                        list[ind].position = availableOrderPosition['down']
+                        if(list.length==2)
+                            list[ind].relativeSection = availableRelative[list[ind+1].sectionName]
+                        else
+                            list[ind].relativeSection = availableRelative[list[ind-1].sectionName]
+                    }
+                    break
                 default:
                     if((list[i-1].position.name=="below") && (list[i+1].position.name=="above")){
                         list[i-1].relativeSection = availableRelative[list[i+1].sectionName]
@@ -46,14 +80,20 @@
                         list[i+1].relativeSection = availableRelative[list[i-1].sectionName]
                     }
             }
+            list.splice(index,1)
             return list;
+
+        }
+
+        function findIndexForInsertionFn(editsection,list){
+
 
         }
 
         function findPosition(editsection,list){
             var index = 0;
             list.forEach(function(section,i){
-                if(editsection.items.sectionName==editsection.sectionName)
+                if(editsection.sectionName==section.sectionName)
                     index = i
             })
             return index;

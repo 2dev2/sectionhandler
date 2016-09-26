@@ -19,9 +19,15 @@
 
         // // if($scope.$$phase)
         // $scope.$apply()
-        vm.sectionList = _sectionList //SectionListService.getSectionList()
+        vm.sectionList = SectionListService.getSectionList()
         vm.sectionAdd = function () {
+            if(!$scope.$$phase) {
+                $scope.$apply()
+            }
              $state.go('sectionAdd')
+
+            
+
         }
         // $log.debug($state,vm.sectionList,_sectionList)
     }

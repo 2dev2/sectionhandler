@@ -28,7 +28,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{id: '0', name: "above", alias: "Above"},
-                relativeSection: {id: '1', name: "edu", alias: "EDUCATION"},
+                relativeSection: {id: '1', name: "EDUCATION", alias: "EDUCATION"},
                 OrderIndex:2,
                 headerSectionOpeartion  :[
                     {operation:'edit'},
@@ -47,7 +47,7 @@
                 description: 'HTML enhanced for web apps!',
                 logo: 'angular.png',
                 position:{id: '1', name: "down", alias: "Down"},
-                relativeSection:{id: '0', name: "bio", alias: "BIODATA"},
+                relativeSection:{id: '0', name: "BIODATA", alias: "BIODATA"},
                 OrderIndex:1,
                 headerSectionOpeartion:[{operation:'default'}],
                 fieldOperation:['add-field','create field group'],
@@ -105,13 +105,9 @@
                 else
                     res = -1;
             }
-            console.log("sort^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",section1,section2,res)
             return res
         }
-
-
-
-
+        
         /**
          * insert new section object according to its position change another object position in list
          * @param newsection

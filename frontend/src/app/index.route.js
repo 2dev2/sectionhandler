@@ -30,7 +30,7 @@
           // resolve: ProfileController.resolve,
           resolve:{
               _sectionList : ['SectionListService',function(SectionListService){
-                  return SectionListService.getSectionList()
+                 return  SectionListService.getSectionList()
               }]
           },
          params: {

@@ -66,41 +66,47 @@
         .module('frontend')
         .controller('ModalInstanceCtrlEdit', ModalInstanceCtrlEdit);
 
-    ModalInstanceCtrlEdit.$inject = ['$uibModalInstance','items','selectedItem','SectionEditService']
+    ModalInstanceCtrlEdit.$inject = ['$uibModalInstance','items','selectedItem','SectionEditService','SectionListService']
 
     /** @ngInject */
-    function ModalInstanceCtrlEdit($uibModalInstance,items,selectedItem,SectionEditService) {
+    function ModalInstanceCtrlEdit($uibModalInstance,items,selectedItem,SectionEditService,SectionListService) {
         var vm = this;
-        console.log(items,"modal instance")
         vm.items = items
-        vm.orderDropDown = {
-            availableSections: [
-                {id: '0', name: "above", alias: "Above"},
-                {id: '1', name: "down", alias: "Down"}
-            ]
-        };
-        vm.SectionListDropDown = {
-            availableSections: [
-                {id: '0', name: "bio", alias: "BIODATA"},
-                {id: '1', name: "edu", alias: "EDUCATION"}
-            ]
+        vm.orderDropDown = {availableSections:[]}
+        var orderDropDownInDropdown = JSON.parse(JSON.stringify(SectionListService.getavailableOrderPosition()))
+        for(var prop in orderDropDownInDropdown){
+            if(orderDropDownInDropdown.hasOwnProperty(prop)){
+                vm.orderDropDown.availableSections.push(orderDropDownInDropdown[prop])
+            }
         }
-        vm.selectedItem = selectedItem
-        vm.selectedItem.items = items
 
-        function getProperObject(prop,value,objList){
-            var res = ''
-            objList.filter(function(obj){
-                if(obj[prop]==value) {
-                    res = obj;
-                }
-            })
-            return res;
+        vm.SectionListDropDown = {availableSections:[]}
+        var sectionListInDropdown = JSON.parse(JSON.stringify(SectionListService.getAvailableRelativeSection()))
+        for(var prop in sectionListInDropdown){
+            if(sectionListInDropdown.hasOwnProperty(prop)){
+                vm.SectionListDropDown.availableSections.push(sectionListInDropdown[prop])
+            }
         }
+
+        vm.selectedItem = selectedItem
+        // {
+        //     sectionType:1,
+        //     items: vm.items,
+        //     order:vm.orderDropDown.availableSections[0],
+        //     section:vm.SectionListDropDown.availableSections[0],
+        //     sectionName:''
+        // };
+
 
         vm.ok = function () {
-            vm.selectedItem.order = getProperObject('name',vm.selectedItem.order.name,vm.orderDropDown.availableSections)
-            vm.selectedItem.section = getProperObject('name',vm.selectedItem.section.name,vm.SectionListDropDown.availableSections)
+            var res = SectionListService.getavailableOrderPosition()
+            console.log(res)
+            vm.selectedItem.order = SectionListService.getavailableOrderPosition()[vm.selectedItem.order.name]
+            vm.selectedItem.section = SectionListService.getAvailableRelativeSection()[vm.selectedItem.section.name]
+            if(vm.selectedItem.items.position.alias=="Above")
+                vm.selectedItem.items.position = SectionListService.getavailableOrderPosition()['above']
+            else
+                vm.selectedItem.items.position = SectionListService.getavailableOrderPosition()['name']
             $uibModalInstance.close(vm.selectedItem.items);
             SectionEditService.editSection(angular.copy(vm.selectedItem))
         };
@@ -108,5 +114,54 @@
         vm.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
+
+        // var vm = this;
+        // console.log(items,"modal instance")
+        // vm.items = items
+        // vm.orderDropDown = {
+        //     availableSections: [
+        //         {id: '0', name: "above", alias: "Above"},
+        //         {id: '1', name: "down", alias: "Down"}
+        //     ]
+        // };
+        // vm.SectionListDropDown = {
+        //     availableSections: [
+        //         {id: '0', name: "bio", alias: "BIODATA"},
+        //         {id: '1', name: "edu", alias: "EDUCATION"}
+        //     ]
+        // }
+        // vm.selectedItem = selectedItem
+        // vm.selectedItem.items = items
+        // // getAvailableRelativeSection
+        // function getProperListFromObj(obj){
+        //     var res = []
+        //     for (prop in objList){
+        //         if(objList.hasOwnProperty(prop))
+        //             res.push()
+        //     }
+        //
+        //
+        // }
+        //
+        // function getProperObject(prop,value,objList){
+        //     var res = ''
+        //     objList.filter(function(obj){
+        //         if(obj[prop]==value) {
+        //             res = obj;
+        //         }
+        //     })
+        //     return res;
+        // }
+        //
+        // vm.ok = function () {
+        //     vm.selectedItem.order = getProperObject('name',vm.selectedItem.order.name,vm.orderDropDown.availableSections)
+        //     vm.selectedItem.section = getProperObject('name',vm.selectedItem.section.name,vm.SectionListDropDown.availableSections)
+        //     $uibModalInstance.close(vm.selectedItem.items);
+        //     SectionEditService.editSection(angular.copy(vm.selectedItem))
+        // };
+        //
+        // vm.cancel = function () {
+        //     $uibModalInstance.dismiss('cancel');
+        // };
     }
 })();

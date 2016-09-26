@@ -34,6 +34,7 @@
             var index = 0;
             if(list.length==1){
                 index = (obj.position.name=='above')?0:1
+                return index;
             }
             for(var i=0;i<list.length;i++){
                 if((list[i].sectionName==obj.relativeSection.alias) && (list[i].sectionName!=list[i].relativeSection.alias)){
