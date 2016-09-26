@@ -1,12 +1,6 @@
 # sectionhandler
 
-This is a simple angular js (version 1.4) Application which try to do CRUD operation with connecting to database.
-data is available through services and which can be changed to connection with DATABASE.
-
-This application is made on component structure
-
-
-
+It is a simple angular js (version 1.4) Application which perform  CRUD operation.
 
 Following steps are needed for  setup :-
 
