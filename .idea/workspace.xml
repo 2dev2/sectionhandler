@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af17549e-6084-4923-b3fa-0c58c00c469e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" afterPath="$PROJECT_DIR$/frontend/src/app/components/section/sectionAdd/sectionAdd.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionAdd.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionEdit.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" afterPath="$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js" />
     </list>
     <ignored path="sectionhandler.iws" />
@@ -45,8 +40,8 @@
       <file leaf-file-name="sectionList.service.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="174" column="46" selection-start-line="174" selection-start-column="46" selection-end-line="174" selection-end-column="46" />
+            <state relative-caret-position="1283">
+              <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
               <folding>
                 <element signature="e#1232#1353#0" expanded="false" />
                 <element signature="e#3138#3238#0" expanded="false" />
@@ -489,12 +484,12 @@
       <workItem from="1474807317136" duration="15332000" />
       <workItem from="1474835157469" duration="6502000" />
       <workItem from="1474841715299" duration="8162000" />
-      <workItem from="1474866178637" duration="7886000" />
+      <workItem from="1474866178637" duration="9046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125982000" />
+    <option name="totallyTimeSpent" value="127142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="24" width="1307" height="744" extended-state="6" />
@@ -899,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/service/sectionList.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="174" column="46" selection-start-line="174" selection-start-column="46" selection-end-line="174" selection-end-column="46" />
+        <state relative-caret-position="1283">
+          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
           <folding>
             <element signature="e#1232#1353#0" expanded="false" />
             <element signature="e#3138#3238#0" expanded="false" />

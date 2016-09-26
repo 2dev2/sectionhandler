@@ -130,9 +130,10 @@
                      newsection.relativeSection =  availableRelativeSection[sectionList[sectionList.length-1].sectionName]
                     break
                 default:
-                    i = index-1
+
                     //we have to insert below to someone------ may be two change -- based on condition
                      if(newsection.position.name=="down"){
+                         i = index-1
                         //change both
                         if((sectionList[i].position.name=="above") &&(sectionList[i+1].position.name=="down") ){
                             sectionList[i].relativeSection = availableRelativeSection[newsection.sectionName]
@@ -145,6 +146,7 @@
                     }
             //we have to insert above to someone------ may be two change -- based on condition
                     else{
+                         i = index + 1
                         if((sectionList[i].position.name=="above") &&(sectionList[i-1].position.name=="down") ){
                             sectionList[i].relativeSection = availableRelativeSection[newsection.sectionName]
                             sectionList[i-1].relativeSection = availableRelativeSection[newsection.sectionName]
