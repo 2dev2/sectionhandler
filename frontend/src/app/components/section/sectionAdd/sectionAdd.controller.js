@@ -5,10 +5,10 @@
         .module('frontend')
         .controller('sectionAddController', sectionAddController);
 
-    sectionAddController.$inject = ['$log','$uibModal','$state','SectionListService','$timeout']
+    sectionAddController.$inject = ['$scope','$log','$uibModal','$state','SectionListService']
 
     /** @ngInject */
-    function sectionAddController($log,$uibModal,$state,SectionListService,$timeout) {
+    function sectionAddController($scope,$log,$uibModal,$state,SectionListService) {
         var vm = this;
         vm.items = SectionListService.getSectionList()
         vm.animationsEnabled = true;
@@ -29,23 +29,16 @@
                 }
             });
             modalInstance.result.then(function (selectedItem) {
-                console.log(selectedItem,"result")
-                // vm.selected1.sectionName = ''
             }, function () {
+                // $state.go('profile',null,{reload: true})
                 $log.info('Modal dismissed at: ' + new Date());
             });
-
-                // $state.go('signup')
-             $state.transitionTo('profile', null, {'reload':true, notify:true});
-            vm.$state = $state;
-            console.log(vm.$state)
-            // $scope.$watch('vm.$state.$current.locals.globals.randomValue', function (randomValue) {
-            //     $scope.random = randomValue;
-            // });
-                // $state.go('profile',{},{reload: true})
-            // $state.reload()
-
-
+            modalInstance.closed.then(function (selectedItem) {
+                $state.go('profile',null,{reload: true})
+            }, function () {
+                $state.go('profile',null,{reload: true})
+                $log.info('Modal dismissed at: ' + new Date());
+            });
         };
 
         vm.open()
