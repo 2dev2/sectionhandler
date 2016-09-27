@@ -124,10 +124,18 @@
                 case 0:
                     newsection.position=availableOrderPosition.above;
                     newsection.relativeSection =  availableRelativeSection[sectionList[0].sectionName]
+                    if((sectionList[0].position.name=='above') || (sectionList.length==1) ) {
+                        sectionList[0].position = availableOrderPosition['down']
+                        sectionList[0].relativeSection = availableRelativeSection[newsection.sectionName]
+                    }
                     break;
                 case sectionList.length:
                     newsection.position=availableOrderPosition.down;
                      newsection.relativeSection =  availableRelativeSection[sectionList[sectionList.length-1].sectionName]
+                    if((sectionList[sectionList.length-1].position.name=='down') || (sectionList.length==1)) {
+                        sectionList[sectionList.length-1].position = availableOrderPosition['above']
+                        sectionList[sectionList.length-1].relativeSection = availableRelativeSection[newsection.sectionName]
+                    }
                     break
                 default:
 
